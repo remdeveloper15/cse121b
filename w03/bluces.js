@@ -57,3 +57,50 @@ for (animal of animales)
 {
     document.write(animal + "<br>");
 }
+
+const DAYS = 6;
+const LIMIT = 30;
+let studentReport = [11, 42, 33, 64, 29, 37, 44];
+
+for (let i = 0; i < studentReport.length; i++)
+{
+    if (studentReport[i] < LIMIT)
+    {
+        document.write(studentReport[i] + "<br>");
+    }
+}
+
+let i = 0;
+
+while (i < studentReport.length)
+{
+    if (studentReport[i] < LIMIT)
+    {
+        document.write(studentReport[i] + "<br>");
+    }
+    i++
+}
+
+
+studentReport.forEach(student => {
+    if (student < LIMIT)
+    {
+        document.write(student + "<br>");
+    }
+    
+});
+
+for (let i in studentReport)
+{
+    if (studentReport[i] < LIMIT)
+    {
+        document.write(studentReport[i] + "<br>")
+    }
+}
+
+const today = new Date();
+
+let todaystring = new Intl.DateTimeFormat('en-US', options).format(today);
+
+document.write(todaystring);
+
